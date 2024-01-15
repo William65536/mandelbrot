@@ -16,15 +16,16 @@ pub fn build(b: *std.Build) void {
 
     exe.addIncludePath(std.Build.LazyPath{ .path = "./include" });
 
-    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/SetupAPI.a" });
-    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/OleAut32.a" });
-    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/Ole32.a" });
-    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/Imm32.a" });
-    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/Version.a" });
-    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/WinMM.a" });
-    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/Gdi32.a" });
-    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/libSDL2.a" });
-    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/libSDL2main.a" });
+    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/SetupAPI.lib" });
+    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/OleAut32.lib" });
+    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/Ole32.lib" });
+    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/Imm32.lib" });
+    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/Version.lib" });
+    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/WinMM.lib" });
+    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/Gdi32.lib" });
+    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/SDL2.lib" });
+    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/SDL2main.lib" });
+    exe.addObjectFile(std.Build.LazyPath{ .path = "./lib/OpenCL.lib" });
 
     b.installArtifact(exe);
 
